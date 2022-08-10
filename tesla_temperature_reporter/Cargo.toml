@@ -1,0 +1,12 @@
+[package]
+name = "tesla_temperature_reporter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hidapi = { version = "1.4.1", default-features = false, features = ["linux-static-hidraw"] }
+nvml-wrapper = "0.8"
+structopt = "0.3"
+
+[profile.release]
+lto = "fat"
